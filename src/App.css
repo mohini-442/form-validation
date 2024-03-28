@@ -71,3 +71,12 @@ input[type="password"] {
 .success-popup button:hover {
   background-color: #0056b3;
 }
+
+.formsection{
+  background-color: grey;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 34px 24px;
+  border-radius: 15px;
+}

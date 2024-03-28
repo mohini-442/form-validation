@@ -68,75 +68,78 @@ const Formvalidation = () => {
     };
     return (
         <>
-            <div className="pt-24">
-                <form className="registration-form" onSubmit={handleSubmit}>
-                    <div className="form-group">
-                        <label htmlFor="name">Name:</label>
-                        <input
-                            type="text"
-                            id="name"
-                            name="name"
-                            value={formData.name}
-                            onChange={handleChange}
-                        // className={formErrors.name ? "error" : ""}
-                        />
-                        {formErrors.name && (
-                            <p className="error-message">{formErrors.name}</p>
-                        )}
-                    </div>
-                    <div className="form-group">
-                        <label htmlFor="number">Number:</label>
-                        <input
-                            type="text"
-                            id="number"
-                            name="number"
-                            value={formData.number}
-                            onChange={handleChange}
-                            className={formErrors.number ? "error" : ""}
-                        />
-                        {formErrors.number && (
-                            <p className="error-message">{formErrors.number}</p>
-                        )}
-                    </div>
-                    <div className="form-group">
-                        <label htmlFor="password">Password:</label>
-                        <input
-                            type="password"
-                            id="password"
-                            name="password"
-                            value={formData.password}
-                            onChange={handleChange}
-                            className={formErrors.password ? "error" : ""}
-                        />
-                        {formErrors.password && (
-                            <p className="error-message">{formErrors.password}</p>
-                        )}
-                    </div>
-                    <div className="form-group">
-                        <label htmlFor="confirmPassword">Confirm Password:</label>
-                        <input
-                            type="password"
-                            id="confirmPassword"
-                            name="confirmPassword"
-                            value={formData.confirmPassword}
-                            onChange={handleChange}
-                            className={formErrors.confirmPassword ? "error" : ""}
-                        />
-                        {formErrors.confirmPassword && (
-                            <p className="error-message">{formErrors.confirmPassword}</p>
-                        )}
-                    </div>
-                    <button type="submit" className="submit-button">
-                        Submit
-                    </button>
-                </form>
-            </div>
-            {showSuccessPopup && (
-                <div className="success-popup">
-                    <p>Form submitted successfully!</p>
-                    <button onClick={handlePopupClose}>Close</button>
+            <div className="pt-24 container mx-auto">
+                <div className="formsection">
+                    <form className="registration-form" onSubmit={handleSubmit}>
+                        <div className="form-group">
+                            <label htmlFor="name">Name:</label>
+                            <input
+                                type="text"
+                                id="name"
+                                name="name"
+                                value={formData.name}
+                                onChange={handleChange}
+                            // className={formErrors.name ? "error" : ""}
+                            />
+                            {formErrors.name && (
+                                <p className="error-message">{formErrors.name}</p>
+                            )}
+                        </div>
+                        <div className="form-group">
+                            <label htmlFor="number">Number:</label>
+                            <input
+                                type="text"
+                                id="number"
+                                name="number"
+                                value={formData.number}
+                                onChange={handleChange}
+                                className={formErrors.number ? "error" : ""}
+                            />
+                            {formErrors.number && (
+                                <p className="error-message">{formErrors.number}</p>
+                            )}
+                        </div>
+                        <div className="form-group">
+                            <label htmlFor="password">Password:</label>
+                            <input
+                                type="password"
+                                id="password"
+                                name="password"
+                                value={formData.password}
+                                onChange={handleChange}
+                                className={formErrors.password ? "error" : ""}
+                            />
+                            {formErrors.password && (
+                                <p className="error-message">{formErrors.password}</p>
+                            )}
+                        </div>
+                        <div className="form-group">
+                            <label htmlFor="confirmPassword">Confirm Password:</label>
+                            <input
+                                type="password"
+                                id="confirmPassword"
+                                name="confirmPassword"
+                                value={formData.confirmPassword}
+                                onChange={handleChange}
+                                className={formErrors.confirmPassword ? "error" : ""}
+                            />
+                            {formErrors.confirmPassword && (
+                                <p className="error-message">{formErrors.confirmPassword}</p>
+                            )}
+                        </div>
+                        <button type="submit" className="submit-button">
+                            Submit
+                        </button>
+                    </form>
+
+                    {showSuccessPopup && (
+                        <div className="success-popup">
+                            <p>Form submitted successfully!</p>
+                            <button onClick={handlePopupClose}>Close</button>
+                        </div>
+                    )}
                 </div>
-            )}
+            </div>
         </>
     );
 };
